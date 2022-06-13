@@ -40,9 +40,6 @@ public class Employee {
 	public void setSalary(Long salary) {
 		this.salary = salary;
 	}
-    
-    
-    
 	
     
     

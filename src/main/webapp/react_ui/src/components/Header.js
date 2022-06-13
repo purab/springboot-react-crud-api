@@ -1,9 +1,10 @@
 import React from "react";
 
-function Header() {
+function Header({name,title}) {
     return (
         <div className="header" style={{background:"red"}}>
-        header
+        <h1>title: {title}</h1>
+        <h1>welcome {name}</h1>
         <p>this is header component</p>
         </div>
     )

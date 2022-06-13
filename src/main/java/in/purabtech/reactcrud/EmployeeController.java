@@ -35,6 +35,7 @@ public class EmployeeController {
 	
 	@DeleteMapping("/deleteEmployee/{employeeId}")
 	public Employee deleteEmployee(@PathVariable Long employeeId) {
+
 		return EmployeeService.deleteEmployee(employeeId);
 	}
 	

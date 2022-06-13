@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+---custom commands that used in project---
+
+https://reactstrap.github.io/?path=/docs/components-button--button
+
+https://www.npmjs.com/package/react-toastify
+
+https://www.npmjs.com/package/react-axios
