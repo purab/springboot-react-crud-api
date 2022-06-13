@@ -2,6 +2,9 @@ import './App.css';
 import Header from "./components/Header";
 import { Button } from 'reactstrap';
 import { ToastContainer, toast } from 'react-toastify';
+import Home from './components/Home';
+import Employee from './components/Employee';
+import AllEmployees from './components/AllEmployees';
 
 function App() {
 
@@ -10,9 +13,10 @@ function App() {
   return (
     <div>
     <ToastContainer /> 
-        <h1>this is react application</h1>
-          <p>this is paragraph</p>
-          <Button color="danger" onClick={notify}>Danger!</Button>
+      
+      <Home />        
+      <Button color="danger" onClick={notify}>Danger!</Button>
+      <AllEmployees />
     
     </div>
   );
