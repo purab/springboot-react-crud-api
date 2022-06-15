@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Home from './components/Home';
 import Employee from './components/Employee';
 import AllEmployees from './components/AllEmployees';
+import AddEmployee from './components/AddEmployee';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <Home />        
       <Button color="danger" onClick={notify}>Danger!</Button>
       <AllEmployees />
-    
+      <AddEmployee />
     </div>
   );
 }
