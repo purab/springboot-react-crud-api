@@ -1,11 +1,12 @@
 import './App.css';
 import Header from "./components/Header";
-import { Button } from 'reactstrap';
+import { Button, Container,Row,Col } from 'reactstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import Home from './components/Home';
 import Employee from './components/Employee';
 import AllEmployees from './components/AllEmployees';
 import AddEmployee from './components/AddEmployee';
+import Menus from './components/Menus';
 
 function App() {
 
@@ -14,11 +15,16 @@ function App() {
   return (
     <div>
     <ToastContainer /> 
-      
-      <Home />        
-      <Button color="danger" onClick={notify}>Danger!</Button>
-      <AllEmployees />
-      <AddEmployee />
+      <Header />
+     <Row>
+      <Col md={4}>
+        
+        <Menus />
+      </Col>
+      <Col md={8}>
+        <Home />
+      </Col>
+     </Row>
     </div>
   );
 }

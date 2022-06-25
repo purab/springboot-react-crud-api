@@ -1,12 +1,21 @@
 import React from "react";
+import {Card, CardBody} from "reactstrap";
 
 function Header({name,title}) {
     return (
-        <div className="header" style={{background:"red"}}>
-            <h1>title: {title}</h1>
-            <h1>welcome {name}</h1>
-            <p>this is header component</p>
+        <div>
+            <Card className="my-1 bg-warning">
+                <CardBody>
+                <div className="header text-center">
+                    <h1>title: {title}</h1>
+                    <h1>welcome {name}</h1>
+                    <p>this is header component</p>
+                </div>        
+                </CardBody>
+            </Card>
+            
         </div>
+        
     )
 }
 
