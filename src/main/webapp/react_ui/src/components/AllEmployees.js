@@ -1,22 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 import Employee from './Employee';
+import axios from "axios";
+import base_url from './Constants';
+import { ToastContainer, toast } from 'react-toastify';
 
 const AllEmployees = ()=>{
 
-    const [employees,setEmployees] =useState([
-        {name: 'tst1',mobileNo:32333333,salary:122224},
-        {name: 'tst2',mobileNo:234563333,salary:78754},
-        {name: 'tst3',mobileNo:85763333,salary:78754}
-    ])
+    useEffect(()=>{
+        document.title= "Employee management";
+        //console.log(base_url);
+        
+    },[])
+
+    const getAllEmployeesFromServer=()=>{
+        axios.get(`${base_url}/employees`).then(
+            (response)=>{
+                console.log(response);
+                toast.success("employees are loaded",{
+                    position:'bottom-center'
+                });
+                setEmployees(response.data)                
+            },
+            (error)=>{
+                //this is for error
+                console.log(error);
+                toast.error("server not reachable..")
+            }
+        )
+    }
+
+    useEffect(()=>{
+        getAllEmployeesFromServer();
+    },[])
+
+    const [employees,setEmployees] =useState([])
+
+    const removeEmployeeById=(id)=>{
+        setEmployees(employees.filter((c)=> c.id !=id ))
+    }
 
     return (
         <div>
             <h1>All Employees</h1>
-            <p>List of employees are as follows:</p>
+            
             {
                 employees.length>0 ? employees.map((item)=>
-                    <Employee employee={item}/>
+                    <Employee key={item.id} employee={item} removeEmployeeById={removeEmployeeById} />
                 ) : "No Employees."
             }
         </div>

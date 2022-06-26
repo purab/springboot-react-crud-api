@@ -9,7 +9,7 @@ function Header({name,title}) {
                 <div className="header text-center">
                     <h1>title: {title}</h1>
                     <h1>welcome {name}</h1>
-                    <p>this is header component</p>
+                    
                 </div>        
                 </CardBody>
             </Card>
